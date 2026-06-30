@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import Link from 'next/link'
+import NavTabs from '@/components/NavTabs'
 import './globals.css'
 
 const geist = Geist({
@@ -32,20 +33,7 @@ export default function RootLayout({
               <span className="text-2xl">🦅</span>
               <span>Albanais Facile</span>
             </Link>
-            <div className="flex items-center gap-6 text-sm font-medium">
-              <Link
-                href="/"
-                className="text-stone-600 hover:text-amber-700 transition-colors"
-              >
-                Accueil
-              </Link>
-              <Link
-                href="/#lecons"
-                className="text-stone-600 hover:text-amber-700 transition-colors"
-              >
-                Leçons
-              </Link>
-            </div>
+            <NavTabs />
           </nav>
         </header>
 
